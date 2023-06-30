@@ -6,7 +6,7 @@
 /*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 13:39:57 by tnakajo           #+#    #+#             */
-/*   Updated: 2022/12/24 14:05:51 by tnakajo          ###   ########.fr       */
+/*   Updated: 2023/06/30 16:34:45 by tnakajo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 
 /* void	ft_print_result(t_list *elem)
 {
-	write(1, elem->content, strlen(elem->content));
+	write (STDOUT_FILENO, elem->content, strlen(elem->content));
 }
 
 void	ft_del(void *content)
@@ -57,22 +57,22 @@ int main(int argc, const char *argv[])
 		if (elem)
 			ft_print_result(elem);
 		else
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, "NULL", 4);
+		write (STDOUT_FILENO, "\n", 1);
 		if (elem2)
 			ft_print_result(elem2);
 		else
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, "NULL", 4);
+		write (STDOUT_FILENO, "\n", 1);
 		if (elem3)
 			ft_print_result(elem3);
 		else
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, "NULL", 4);
+		write (STDOUT_FILENO, "\n", 1);
 		if (elem4)
 			ft_print_result(elem4);
 		else
-			write(1, "NULL", 4);
+			write (STDOUT_FILENO, "NULL", 4);
 	}
 	return (0);
 } */

@@ -6,7 +6,7 @@
 /*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:34:16 by tnakajo           #+#    #+#             */
-/*   Updated: 2022/12/24 12:18:45 by tnakajo          ###   ########.fr       */
+/*   Updated: 2023/06/30 17:48:44 by tnakajo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,20 +55,20 @@ t_list	*ft_lstlast(t_list *lst)
 		i = 0;
 		content = val->content;
 		while (content[i])
-			write(1, &(content[i++]), 1);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, &(content[i++]), 1);
+		write (STDOUT_FILENO, "\n", 1);
 		elem->next = NULL;
 		val = ft_lstlast(elem);
 		content = val->content;
 		i = 0;
 		while (content[i])
-			write(1, &(content[i++]), 1);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, &(content[i++]), 1);
+		write (STDOUT_FILENO, "\n", 1);
 		elem = NULL;
 		val = ft_lstlast(elem);
 		if (val == NULL)
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, "NULL", 4);
+		write (STDOUT_FILENO, "\n", 1);
 	}
 	return (0);
 } */

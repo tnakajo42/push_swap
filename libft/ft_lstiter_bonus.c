@@ -6,7 +6,7 @@
 /*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 14:19:32 by tnakajo           #+#    #+#             */
-/*   Updated: 2022/12/24 14:49:28 by tnakajo          ###   ########.fr       */
+/*   Updated: 2023/06/30 16:34:54 by tnakajo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void	ft_print_result(t_list *elem)
 		len = 0;
 		while (((char *)elem->content)[len])
 			len++;
-		write(1, elem->content, len);
-		write(1, "\n", 1);
+		write (STDOUT_FILENO, elem->content, len);
+		write (STDOUT_FILENO, "\n", 1);
 		elem = elem->next;
 	}
 }

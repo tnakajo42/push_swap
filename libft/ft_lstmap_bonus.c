@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tnakajo <tnakajo@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 14:33:30 by tnakajo           #+#    #+#             */
-/*   Updated: 2022/12/24 21:30:25 by tnakajo          ###   ########.fr       */
+/*   Updated: 2023/06/30 16:35:10 by tnakajo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	len = 0;
 	while (((char *)elem->content)[len])
 		len++;
-	write(1, ((char *)elem->content), len);
-	write(1, "\n", 1);
+	write (STDOUT_FILENO, ((char *)elem->content), len);
+	write (STDOUT_FILENO, "\n", 1);
 }
 
 void	*ft_map(void *ct)

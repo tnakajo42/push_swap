@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tnakajo <tnakajo@student.42berlin.de>      +#+  +:+       +#+         #
+#    By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/28 15:30:50 by tnakajo           #+#    #+#              #
-#    Updated: 2023/02/21 21:48:17 by tnakajo          ###   ########.fr        #
+#    Updated: 2023/06/24 19:58:25 by tnakajo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRCS = ft_isalpha.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+	push_swap_libft.c \
 
 B_SRCS = ft_lstnew_bonus.c \
 	ft_lstadd_front_bonus.c \

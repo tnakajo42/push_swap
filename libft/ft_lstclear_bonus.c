@@ -6,7 +6,7 @@
 /*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 14:06:25 by tnakajo           #+#    #+#             */
-/*   Updated: 2022/12/24 14:50:16 by tnakajo          ###   ########.fr       */
+/*   Updated: 2023/06/30 16:34:20 by tnakajo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 /* void	ft_print_result(t_list *elem)
 {
-	write(1, elem->content, strlen(elem->content));
+	write (STDOUT_FILENO, elem->content, strlen(elem->content));
 }
 
 static int	nb_free_done;
@@ -68,26 +68,26 @@ int main(int argc, const char *argv[])
 		if (elem)
 			ft_print_result(elem);
 		else
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, "NULL", 4);
+		write (STDOUT_FILENO, "\n", 1);
 		if (elem2)
 			ft_print_result(elem2);
 		else
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, "NULL", 4);
+		write (STDOUT_FILENO, "\n", 1);
 		if (elem3)
 			ft_print_result(elem3);
 		else
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
+			write (STDOUT_FILENO, "NULL", 4);
+		write (STDOUT_FILENO, "\n", 1);
 		if (elem4)
 		{
-			write(1, "nb_free_done = ", 15);
+			write (STDOUT_FILENO, "nb_free_done = ", 15);
 			nb_free_done += '0';
-			write(1, &nb_free_done, 1);
+			write (STDOUT_FILENO, &nb_free_done, 1);
 		}
 		else
-			write(1, "NULL", 4);
+			write (STDOUT_FILENO, "NULL", 4);
 	}
 	return (0);
 } */

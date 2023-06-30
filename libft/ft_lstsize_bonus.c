@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tnakajo <tnakajo@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 16:37:01 by tnakajo           #+#    #+#             */
-/*   Updated: 2023/02/11 15:10:27 by tnakajo          ###   ########.fr       */
+/*   Updated: 2023/06/30 16:37:37 by tnakajo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	ft_print_result(t_list *elem)
 	len = 0;
 	while (((char *)elem->content)[len])
 		len++;
-	write(1, elem->content, len);
-	write(1, "\n", 1);
+	write (STDOUT_FILENO, elem->content, len);
+	write (STDOUT_FILENO, "\n", 1);
 }
 
 int main(int argc, const char *argv[])
@@ -69,16 +69,16 @@ int main(int argc, const char *argv[])
 		elem2->next = elem3;
 		elem3->next = elem4;
 		c = ft_lstsize(elem) + 48;
-		write(1, &c, 1);
-		write(1, "\n", 1);
+		write (STDOUT_FILENO, &c, 1);
+		write (STDOUT_FILENO, "\n", 1);
 		elem2->next = NULL;
 		c = ft_lstsize(elem) + 48;
-		write(1, &c, 1);
-		write(1, "\n", 1);
+		write (STDOUT_FILENO, &c, 1);
+		write (STDOUT_FILENO, "\n", 1);
 		elem = NULL;
 		c = ft_lstsize(elem) + 48;
-		write(1, &c, 1);
-		write(1, "\n", 1);
+		write (STDOUT_FILENO, &c, 1);
+		write (STDOUT_FILENO, "\n", 1);
 	}
     printf("-----\n");
 	return (0);

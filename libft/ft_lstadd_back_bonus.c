@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tnakajo <tnakajo@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: tnakajo <tnakajo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 12:20:23 by tnakajo           #+#    #+#             */
-/*   Updated: 2022/12/24 20:20:44 by tnakajo          ###   ########.fr       */
+/*   Updated: 2023/06/30 16:33:52 by tnakajo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	len = 0;
 	while (((char *)elem->content)[len])
 		len++;
-	write(1, elem->content, len);
-	write(1, "\n", 1);
+	write (STDOUT_FILENO, elem->content, len);
+	write (STDOUT_FILENO, "\n", 1);
 }
 
 int main(int argc, const char *argv[])
