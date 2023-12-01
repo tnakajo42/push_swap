@@ -38,5 +38,5 @@ $ make download_leak_tester
 ```
 # EVALUATIONS
 
-You can evaluate every 42 project with the link below.<br>
+You can evaluate every 42 projects with the link below.<br>
 https://rphlr.github.io/42-Evals/
